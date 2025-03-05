@@ -37,6 +37,7 @@ void Counter::setCount(int count) noexcept
 
 void Counter::updateLabel(int count) noexcept
 {
+    // this cause crash on windows
     // m_label.set_text(Glib::ustring::format(count));
     m_label.set_text(std::format("{}", count));
 }
